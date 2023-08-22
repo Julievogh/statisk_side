@@ -1,0 +1,74 @@
+
+
+font-family: "bebas-neue-by-fontfabric", sans-serif;
+font-weight: 100;
+font-style: normal;
+
+font-family: "bebas-neue-by-fontfabric", sans-serif;
+font-weight: 200;
+font-style: normal;
+
+font-family: "bebas-neue-by-fontfabric", sans-serif;
+font-weight: 300;
+font-style: normal;
+
+font-family: "bebas-neue-by-fontfabric", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+font-family: "bebas-neue-by-fontfabric", sans-serif;
+font-weight: 700;
+font-style: normal;
+
+* {
+    border: box;
+}
+
+header {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+header img {
+    align-self: center;
+    justify-self: center;
+}
+
+.topnav {
+font-family: bebas-neue-by-fontfabric;
+text-align: center;
+font-size: 2rem;
+
+}
+
+.topnav a {
+    margin: 1rem;
+}
+
+.topnav a:link {
+    color: rgb(98, 210, 230);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  .topnav a:visited {
+    color: rgb(228, 117, 213);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  .topnav a:hover {
+    color: rgb(98, 83, 231);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  .topnav a:active {
+    color: rgb(76, 63, 190);
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+
+
