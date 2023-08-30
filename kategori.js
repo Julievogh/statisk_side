@@ -6,11 +6,7 @@ accessories: "img/accessories.png",
   freeitems: "img/freeitems.png",
   personalcare: "img/personalcare.png",
   sportinggoods: "img/sportinggoods.png",
-  // Add URLs for other categories here
-  // For example:
-  // category1: "img/category1.png",
-  // category2: "img/category2.png",
-  // ...
+ 
 };
 
 
