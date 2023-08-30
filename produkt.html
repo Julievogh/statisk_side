@@ -12,10 +12,10 @@
     <header>
       <img src="./img/sportylogo.jpg" alt="Sporty Clothes Logo" />
       <nav class="topnav">
-        <a href="index.html">Startside</a>
+        <a href="kategori.html">Startside</a>
         <a href="kategori.html">Kategori</a>
-        <a href="produkt.html">Produkt</a>
-        <a href="produktliste.html">Produktliste</a>
+
+   
       </nav>
     </header>
     <main>
@@ -55,15 +55,22 @@
           <form>
             <label class="product_str">
               Vælg størrelse
-              <button class="str_button">34</button>
-              <button class="str_button">36</button>
-              <button class="str_button">38</button>
-              <button class="str_button">40</button>
-              <button class="str_button">42</button>
-              <button class="str_button">44</button>
-              
+              <select name="str" id="str">
+                <option class="str_button">34</option>
+                <option class="str_button">36</option>
+                <option class="str_button">38</option>
+                <option class="str_button">40</option>
+                <option class="str_button">42</option>
+                <option class="str_button">44</option>
+              </select>
             </label>
-            <button class="køb_nu">KØB NU</button>
+            <button id="buyNowButton">KØB NU</button>
+            <div id="popup" class="popup">
+              <div class="popup-content">
+                <span id="popup-message"></span>
+                <button id="closePopup">Close</button>
+              </div>
+            </div>
           </form>
         </div>
       </section>

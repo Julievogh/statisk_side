@@ -1,5 +1,3 @@
-// https://kea-alt-del.dk/t7/api/products/1525
-
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
 
@@ -8,7 +6,6 @@ fetch("https://kea-alt-del.dk/t7/api/products/" + id)
   .then((data) => showProduct(data));
 
 function showProduct(product) {
-  console.log(product);
   document.querySelector(".product_tekst h5").textContent =
     product.productdisplayname;
   document.querySelector(".product_tekst h6").textContent = product.articletype;
@@ -55,3 +52,23 @@ description	"<p>asfafaf<br> kasjhdkashd</p>"
 styledesc	null
 
 */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const buyNowButton = document.getElementById("buyNowButton");
+  const popup = document.getElementById("popup");
+  const popupMessage = document.getElementById("popup-message");
+  const closePopup = document.getElementById("closePopup");
+
+  buyNowButton.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    popupMessage.textContent = "We have added your choice to your basket.";
+    popup.style.display = "block";
+  });
+
+  closePopup.addEventListener("click", function () {
+    console.log("Close button clicked");
+    popup.style.display = "none";
+    window.location.href = "produktliste.html"; // Redirect to produktliste.html
+  });
+});
