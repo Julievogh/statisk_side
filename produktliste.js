@@ -4,10 +4,22 @@ document.addEventListener("DOMContentLoaded", function () {
   const category = urlParams.get("category");
 
   if (brandName) {
+    fetchBrandDetails(brandName);
     fetchProductsByBrand(brandName);
   } else if (category) {
     fetchProductsByCategory(category);
   }
+
+  function fetchBrandDetails(brandName) {
+    fetch("https://kea-alt-del.dk/t7/api/brands/" + brandName)
+      .then((res) => res.json())
+      .then(function (brand) {
+        showBrandNameh2(brand);
+        fetchProductsByBrand(brandName);
+      });
+  }
+
+ 
 
   function fetchProductsByBrand(brandName) {
     fetch("https://kea-alt-del.dk/t7/api/products?brandname=" + brandName)
@@ -19,10 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch(`https://kea-alt-del.dk/t7/api/products?category=${category}`)
       .then((res) => res.json())
       .then(showProducts);
-  }
-
-  function displayProductsByBrand(products) {
-    products.forEach(showProduct);
   }
 
   function showProducts(products) {
@@ -49,7 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const parent = document.querySelector(".productliste_container");
     parent.appendChild(copy);
-
-    /* SOLD OUT */
   }
+
 });
