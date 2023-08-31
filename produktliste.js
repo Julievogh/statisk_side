@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function fetchProductsByBrand(brandName) {
-    fetch("https://kea-alt-del.dk/t7/api/products")
+    fetch("https://kea-alt-del.dk/t7/api/products?brandname=" + brandName)
       .then((res) => res.json())
       .then(showProducts);
   }
@@ -43,9 +43,19 @@ document.addEventListener("DOMContentLoaded", function () {
       .querySelector(".read-more")
       .setAttribute("href", `produkt.html?id=${product.id}`);
 
+    if (product.soldout == true) {
+      copy.querySelector("p.pris").textContent = "sold out";
+    }
+
     const parent = document.querySelector(".productliste_container");
     parent.appendChild(copy);
 
-    /* MAKE SOLD OUT / TILBUD */
+    /* SOLD OUT */
   }
 });
+
+/*
+if(product.soldout){
+  copy.querySelector("article").classList.add("kategori_udsolgt");
+}
+*/
