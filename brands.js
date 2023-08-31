@@ -11,18 +11,23 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function showBrand(brand) {
+    if (brand.brandbio === null) {
+      return; // Skip this brand with null brandbio
+    }
+
     const template = document.querySelector("template").content;
     const copy = template.cloneNode(true);
 
     copy.querySelector("h3").textContent = brand.brandname;
     copy.querySelector("h4").textContent = brand.brandbio;
 
-    copy.querySelector("h3").addEventListener("click", function () {
+    copy.querySelector("p").addEventListener("click", function () {
       const brandName = brand.brandname;
       window.location.href = `produktliste.html?brand=${encodeURIComponent(
         brandName
       )}`;
     });
+
     const parent = document.querySelector(".brands_container");
     parent.appendChild(copy);
   }

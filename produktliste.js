@@ -53,9 +53,3 @@ document.addEventListener("DOMContentLoaded", function () {
     /* SOLD OUT */
   }
 });
-
-/*
-if(product.soldout){
-  copy.querySelector("article").classList.add("kategori_udsolgt");
-}
-*/

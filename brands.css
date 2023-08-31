@@ -1,8 +1,40 @@
 .brands_container {
-    display: flex;
-    flex-wrap: wrap;
-    
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+  justify-content: center;
 }
 
+.brands_container div {
+  width: 200px;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  margin: 1rem;
+  
+}
+
+.brands_container h3 {
+  font-size: 2rem;
+}
+
+.brands_container h4 {
+    color: rgb(158, 195, 212);
+}
+
+.hide {
+    display: none;
+}
+
+.brands_container div p {
+    cursor: pointer;
+}
+
+.brands_container div p:hover {
+    color: rgb(98, 83, 231);
+    background-color: transparent;
+    text-decoration: none;
+    font-weight: 500;
+  }
