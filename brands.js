@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function showBrand(brand) {
     if (brand.brandbio === null) {
-      return; // Skip this brand with null brandbio
+      return;
     }
 
     const template = document.querySelector("template").content;
