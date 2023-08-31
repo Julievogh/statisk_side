@@ -14,8 +14,6 @@ function showProduct(product) {
   document.querySelector(".product_tekst p .category").textContent =
     product.category;
 
-  /* ADD AN EXTRA PARAGRAPH /NODE of brandname */
-
   document.querySelector(
     ".main_pic"
   ).src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
@@ -69,6 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
   closePopup.addEventListener("click", function () {
     console.log("Close button clicked");
     popup.style.display = "none";
-    window.location.href = "produktliste.html"; // Redirect to produktliste.html
+    window.location.href = "produktliste.html";
   });
 });

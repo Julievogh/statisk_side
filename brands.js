@@ -22,8 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = `produktliste.html?brand=${encodeURIComponent(
         brandName
       )}`;
-    }); // <- Moved this brace
-
+    });
     const parent = document.querySelector(".brands_container");
     parent.appendChild(copy);
   }

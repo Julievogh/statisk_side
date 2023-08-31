@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const parent = document.querySelector(".productliste_container");
     parent.appendChild(copy);
-  }
 
-  // Any additional code or event listeners you have
+    /* MAKE SOLD OUT / TILBUD */
+  }
 });
