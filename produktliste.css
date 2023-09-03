@@ -1,67 +1,68 @@
 .productliste_container {
-display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr;
-justify-content: center ;
-align-items: center ;
-margin: 1rem;
-padding: 0;
-
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  padding: 0;
 }
 
-
 .product {
-    justify-content: center ;
-    align-items: center ;
-    text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .product a {
-    text-decoration: none;
-    font-size: 1.2rem;
-   
+  text-decoration: none;
+  font-size: 1.2rem;
 }
 
 .product img {
-    width: 55%;
-    
+  width: 55%;
 }
 
 .pris {
-    color: rgb(50, 47, 80);
-    font-weight: 600;
+  color: rgb(50, 47, 80);
+  font-weight: 600;
 }
 
 .product a:link {
-    color: rgb(98, 210, 230);
-    background-color: transparent;
-    text-decoration: none;
-  }
-  
-  .product a:visited {
-    color: rgb(228, 117, 213);
-    background-color: transparent;
-    text-decoration: none;
-  }
-  
-  .product a:hover {
-    color: rgb(172, 83, 231);
-    background-color: transparent;
-    text-decoration: none;
-    font-weight: 500;
+  color: rgb(98, 210, 230);
+  background-color: transparent;
+  text-decoration: none;
+}
 
+.product a:visited {
+  color: rgb(228, 117, 213);
+  background-color: transparent;
+  text-decoration: none;
+}
 
+.product a:hover {
+  color: rgb(172, 83, 231);
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .productliste_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    margin-top: 2rem;
   }
+}
 
-  @media (max-width: 600px) {
+.soldout {
+  opacity: 0.2;
+}
 
-    .productliste_container {
-        display: grid;
-        grid-template-columns: 1fr 1fr ;
-        margin: 2rem;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-        margin-top: 2rem;
-        }
-  }
+.soldout_color {
+  color: blueviolet;
+}

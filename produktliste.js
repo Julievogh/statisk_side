@@ -19,8 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
- 
-
   function fetchProductsByBrand(brandName) {
     fetch("https://kea-alt-del.dk/t7/api/products?brandname=" + brandName)
       .then((res) => res.json())
@@ -53,10 +51,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (product.soldout == true) {
       copy.querySelector("p.pris").textContent = "sold out";
+      copy.querySelector("article .pris").classList.add("soldout_color");
+      copy.querySelector("article img").classList.add("soldout");
     }
 
     const parent = document.querySelector(".productliste_container");
     parent.appendChild(copy);
   }
-
 });
